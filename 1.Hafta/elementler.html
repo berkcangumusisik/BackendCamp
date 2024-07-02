@@ -3,6 +3,19 @@
 <head>
     <title>Elementler</title>
     <meta charset="UTF-8">
+    <style>
+        .table2 table, .table2 th, .table2 td {
+            border: 1px solid black;
+        }
+
+        .table3 table, .table3 th, .table3 td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+
+
+    </style>
 </head>
 <body>
     <!-- Başlık Etiketleri -->
@@ -15,24 +28,129 @@
 
     <!-- Paragraf Etiketi -->
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown print</p>
-    
+
     <!-- Link Etiketi -->
     <a href="https://www.google.com">Google</a>
     <a href="https://siliconmadeacademy.com/">Siliconmedia Akademi'ye hoş geldiniz.</a>
-    
+
     <br />
     <!--Resim Etiketleri-->
-    <img src="https://picsum.photos/id/222/600/400" alt="Alternatif Metin"/>
-    
+    <img src="https://picsum.photos/id/222/600/400" alt="Alternatif Metin" />
+
     <br />
-    <img src="#" alt="Fotoğraf Gösterilmiyor."/>
-    <br/>
-    <img title="ne güzel foto" src="https://picsum.photos/id/222/600/400" width="300" height="200" alt="Alternatif Metin"/>
-    <br/>
+    <img src="#" alt="Fotoğraf Gösterilmiyor." />
+    <br />
+    <img title="ne güzel foto" src="https://picsum.photos/id/222/600/400" width="300" height="200" alt="Alternatif Metin" />
+    <br />
     <p style="color:red;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown prin</p>
-    
+
     <h1 title="Bu bir başlıktır">Title Attribute'u burada denenir.'</h1>
-    </body>
+    <hr />
+
+    <p><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</b> </p>
+
+    <p><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</strong> </p>
+
+    <p><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</i> </p>
+
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has<mark> been the industry's standard dummy text ever since the 1500s, when an unknown</mark> </p>
+
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem <del> Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</del> </p>
+
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem <ins> Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</ins> </p>
+
+    <p>H<sub>2</sub>O</p>
+    <p>e = m x C<sup>2</sup></p>
+
+    <hr />
+    <table>
+        <tr>
+            <td>Öğrenci Adı</td>
+            <td>Öğrenci Numarası</td>
+            <td>Not</td>
+        </tr>
+
+        <tr>
+            <td>Ahmet Yılmaz</td>
+            <td>123</td>
+            <td>50</td>
+        </tr>
+
+        <tr>
+            <td>Mehmet Yılmaz</td>
+            <td>124</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>Ayşe Yıldız</td>
+            <td>125</td>
+            <td>70</td>
+        </tr>
+
+
+    </table>
+
+    <div>
+        <table class="table2">
+            <tr>
+                <td>Öğrenci Adı</td>
+                <td>Öğrenci Numarası</td>
+                <td>Not</td>
+            </tr>
+
+            <tr>
+                <td>Ahmet Yılmaz</td>
+                <td>123</td>
+                <td>50</td>
+            </tr>
+
+            <tr>
+                <td>Mehmet Yılmaz</td>
+                <td>124</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Ayşe Yıldız</td>
+                <td>125</td>
+                <td>70</td>
+            </tr>
+
+
+        </table>
+    </div>
+
+
+    <div>
+        <table class="table3">
+            <tr>
+                <td>Öğrenci Adı</td>
+                <td>Öğrenci Numarası</td>
+                <td>Not</td>
+            </tr>
+
+            <tr>
+                <td>Ahmet Yılmaz</td>
+                <td>123</td>
+                <td>50</td>
+            </tr>
+
+            <tr>
+                <td>Mehmet Yılmaz</td>
+                <td>124</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Ayşe Yıldız</td>
+                <td>125</td>
+                <td>70</td>
+            </tr>
+
+
+        </table>
+    </div>
+
+
+</body>
 
 
     <!--
@@ -73,6 +191,35 @@
         
     style :Elementin CSS özelliklerini belirtir.
     title :Üzerine gelindiğinde açıklama metni gösterir.
+    
+    <hr/> :Yatay çizgi ekler.
 
         
+    Formatlama Etiketleri
+    <b></b> :Kalın yazı tipi etiketidir.
+    <strong></strong> :Önemli yazı tipi etiketidir.
+    <i></i> :İtalik yazı tipi etiketidir.
+    <em></em> :Vurgulu yazı tipi etiketidir.
+    <u></u> :Altı çizili yazı tipi etiketidir.
+    <s></s> :Üzeri çizili yazı tipi etiketidir.
+    <sub></sub> :Alt simge etiketidir.
+    <sup></sup> :Üst simge etiketidir.
+    <del></del> :Üzeri çizili yazı tipi etiketidir.
+    <ins></ins> :Altı çizili yazı tipi etiketidir.
+    <mark></mark> :Arkaplan rengi belirtilen yazı tipi etiketidir.
+
+    Tablolar 
+    <table></table> :Tablo etiketidir.
+    <tr></tr> :Tablo satırı etiketidir.
+    <td></td> :Tablo hücresi etiketidir.
+    <th></th> :Tablo başlık hücresi etiketidir.
+    <thead></thead> :Tablo başlık bölümü etiketidir.
+    <tbody></tbody> :Tablo içerik bölümü etiketidir.
+    <tfoot></tfoot> :Tablo alt bölümü etiketidir.
+        
+        div :Bir bölümü belirtir. 
+
+        
+        
+
     -->
