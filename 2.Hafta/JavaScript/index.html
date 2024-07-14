@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Çalışmaları</title>
+  <script>
+    //Javascript kodlarını "script" etiketleri içerisinde yazabiliriz.
+
+    //DEĞİŞKEN TANIMLAMA
+    var adi = "Siliconmade";
+    let asgariMaas = 17000.654;
+    const personelSayisi = 5;
+
+    // Güncel olarak let ve const kullanmayı önerir.
+    // const değişkeni tanımlarken değerini değiştiremeyiz.
+    // let değişkeni tanımlarken değerini değiştirebiliriz.
+
+    //OPERATÖRLER
+    //-------------------------
+
+    // Aritmetiksel operatorler
+    var a = 3 + 5;
+    var b = 45 - 65;
+    var c = 9 * 45;
+    var d = 324 / 12;
+    var e = 10 % 3;
+
+    // Mantık opretörler
+
+    // && ve
+    // || veya
+    // ! değil
+
+    // Karşılaştırma operatörleri
+
+    // == eşit mi
+    // === görünüşleri ve türleri de eşit mi
+    // != eşit değil mi
+    // > büyüktür
+    // < küçüktür
+    // >= büyük eşit
+    // <= küçük eşit
+
+    //TARİH NESNELERİ
+
+    const suAn = new Date(); // içinde bulunduğumuz zaman
+
+    const dogumTarihi = new Date(1990, 5, 15, 10, 30, 0); // belirtmek istediğimz herhangi bir zaman
+
+    const yil = suAn.getFullYear();
+    const ay = suAn.getMonth();
+    const gun = suAn.getDay();
+    const saat = suAn.getHours();
+    const dk = suAn.getMinutes();
+    const saniye = suAn.getSeconds();
+
+    // Null ve Undefined
+
+    let x; // x değişkeni undefined
+
+    let y = null; // y değişkeni null
+
+    //CONSOLE KULLANIMI
+    // ------------------------------
+
+    var isim = "ali";
+
+    console.log(isim);
+
+    console.log("isminiz: " + isim)
+
+    var sayi1 = 5;
+    var sayi2 = 65;
+
+    console.log("sonuç: " + (sayi1 + sayi2));
+
+    // INFO
+
+    console.info("merhabalar");
+
+    // WARN
+
+    console.warn("Şifreniz 5 karakterden fazla olmalı");
+
+    // ERROR
+
+    console.error("Şifreniz 5 karakterden fazla olmalı");
+    // TYPEOF
+    //-----------------------------
+
+    // bir değişkenin tipini alamayı sağlar.
+
+    console.log(typeof adi);
+    console.log(typeof asgariMaas);
+    console.log(typeof personelSayisi);
+    console.log(typeof sayi1);
+    console.log(typeof odemeTarihi);
+    console.log(typeof suAn);
+
+    // Veri Türleri
+
+    // string
+    // number
+    // bool
+    // null
+    // undefined
+    // object (nesne)
+    // dizi (array)
+    // function
+    // symbol
+
+
+    //OBJECT NOTATION
+
+    // Javascript'te nesne (object) oluşturma
+
+    var person = {
+      name: "cemil",
+      birthYear: 1990
+    };
+
+    console.log(person.name);
+
+
+    // LOCAL SCOPE - GLOBAL SCOPE
+
+    // Global scope
+
+    if (true) {
+      var sayi3 = 10;
+
+      console.log("sayı: " + sayi3);
+    }
+
+    console.log("sayı: " + sayi3);
+
+    // Local Scope
+
+    if (true) {
+      let sayi4 = 10;
+
+      console.log("sayi : " + sayi4);
+    }
+
+
+    //console.log("sayi : " + sayi4);
+
+
+    // DÖNGÜLER
+
+    //For Döngüsü
+
+    for (let i = 1; i < 10; i++) {
+      if (i == 2) continue;
+      if (i == 6) break;
+      console.log("sayı: " + i);
+    }
+
+    // While Döngüsü
+
+    let t = 0;
+    let toplam = "";
+
+
+    while (t < 9) {
+      t++;
+      if (t == 5) continue;
+      toplam += t;
+    }
+
+    console.log(toplam);
+
+
+    console.clear();
+
+    // Çarpım tablosu
+
+    const sayi5 = 6;
+
+    for (var i = 1; i <= 10; i++) {
+      console.log(i + "x" + sayi5 + "=" + (i * sayi5));
+    }
+
+    //DİZİLER
+
+    console.clear();
+
+    let isimler = ["Cemil", "Suat", "Yusuf", "Orhan"];
+    console.log(isimler, isimler[3]);
+
+
+    let arr2 = ['AA', 12, { name: 'Mahmut' }];
+    console.log(arr2[2]);
+    console.log(arr2[2].name);
+
+    console.clear();
+
+    const fruits = ["apple", "orange", "cherry"];
+
+    // Dizinin sonuna eleman ekleme
+    fruits.push('banana');
+    fruits.push('kiwi', "lemon");
+
+    console.log(fruits);
+
+    // Dizinin başına eleman ekleme
+    fruits.unshift('lemon', 'pineapple');
+
+    console.log(fruits);
+
+    // Son elemanı silme
+    fruits.pop();
+
+    console.log(fruits);
+
+    // İlk elemanı silme
+    fruits.shift();
+
+    console.log(fruits);
+
+    // Araya eleman ekleme/çıkarma
+    // eleman çıkarma
+    fruits.splice(1, 1);
+
+    console.log(fruits);
+
+    // eleman ekleme
+    fruits.splice(2, 0, "lemonA", "kiwiA");
+
+    console.log(fruits);
+
+    // dizideki eleman sayısı
+    console.log(fruits.length + " adet eleman var");
+
+
+
+    fruits.forEach(function (fruit, index) {
+      console.log((index + 1) + ". sıradaki eleman : " + fruit);
+    });
+
+    console.log(fruits.indexOf('mahmut'));
+
+
+    console.clear();
+
+    var isimler2 = ["cem", "emircan", "irem", "ali", "dilay", "mert"];
+
+    console.log(isimler2);
+    isimler2.sort();
+    console.log(isimler2);
+
+    var sayilar = [1, 12, 6, 5];
+    sayilar.sort(); // metinsel olarak sıralama yapar
+    sayilar.sort(function (a, b) { return a - b }); // sayısal sıralama
+
+
+    console.log(sayilar);
+    sayilar.reverse();
+    console.log(sayilar);
+
+
+    // FUNCTION
+
+    // 1.
+    function Carp(a, b) {
+      return a * b;
+    }
+
+    var sonuc = Carp(2, 5);
+
+    // 2.
+
+    var Topla = function (a, b) {
+      return a + b;
+    }
+
+    var sonuc = Topla(2, 5);
+
+    // Arrow function
+
+    var Topla = (a, b) => a + b;
+
+    var person = {
+      name: "Ali",
+      birthYear: 1990,
+      getAge: function (year) {
+        //return 2024 - year;
+        return (new Date().getFullYear()) - year;
+      }
+    }
+
+    let year = person.birthYear;
+    console.log(person.getAge(year));
+
+
+  </script>
+</head>
+
+<body>
+
+  <!--EVENTS-->
+
+  <h2>Events</h2>
+
+  <button class="btn btn-primary" onclick="alert('Merhaba')">Merhaba</button>
+  <button class="btn btn-primary" onclick="uyariGoster()">Sil</button>
+  <button class="btn btn-primary" onclick="sifreliGirisYap()">Parolalı Giriş</button>
+
+  <br />
+  <br />
+
+  <button ondblclick="alert('çift tıkladın')">ondblclick event'i</button>
+  <button onmouseover="alert('mouse burada')">onmouseover event'i</button>
+
+  <script>
+    function uyariGoster() {
+      var secim = confirm('Silmek istediğinize emin misiniz?');
+      if (secim) {
+        alert('Silindi');
+      }
+    }
+    function sifreliGirisYap() {
+      var girilenDeger = prompt('Parolanız : ');
+      if (girilenDeger == '123') {
+        alert('Parola doğru...');
+      }
+      else {
+        alert('Parola yanlış');
+      }
+    }
+  </script>
+
+  <!--EVENT LISTENERS-->
+
+  <h2>Event Listener</h2>
+
+  <button id="btn1">Tıkla</button>
+
+  <script>
+    var btn1 = document.getElementById('btn1');
+    // btn1.addEventListener(olayAdi,fonksiyonAdi);
+    btn1.addEventListener('click', islem1);
+
+    function islem1() {
+      alert(1);
+    }
+
+    btn1.addEventListener('click', function () {
+      alert(2);
+    });
+
+  </script>
+
+  <br />
+  <br />
+  <!--DOM YAPISI-->
+
+  <div id="bilgi">JS ile bu kısım değiştirilecek.</div>
+
+  <script>
+    let bilgiElemani = document.getElementById('bilgi');
+
+    bilgiElemani.innerHTML = "Merhaba Siliconmade Academy";
+    bilgiElemani.style.color = "red";
+    bilgiElemani.style.fontSize = "30px";
+  </script>
+
+  <br />
+  <br />
+  <!--Örnek-2-->
+  <label for="metin">Buraya</label>
+  <input type="text" name="name" value="" id="metin" placeholder="metin girin" />
+  <button onclick="Tamam()">Tamam</button>
+
+  <br />
+
+  <div id="sonuc">Sonuc buraya gelecek</div>
+
+  <script>
+    function Tamam() {
+      document.getElementById('sonuc').innerHTML = document.getElementById('metin').value;
+    }
+  </script>
+
+
+  <!--Örnek-3-->
+
+  <div id="parentEleman">
+
+  </div>
+
+  <script>
+    var paragraf = document.createElement("p");
+    paragraf.innerHTML = "Lorem nisl diam lorem ex amet lorem feugait et eirmod";
+    paragraf.style.color = "red";
+
+    var eleman = document.getElementById("parentEleman");
+
+    eleman.appendChild(paragraf);
+
+    var listOl = document.createElement("ol");
+    eleman.insertBefore(listOl, paragraf);
+
+    var listLi = document.createElement("li");
+    //listLi.innerText = "<b>Örnek</b>"
+    listLi.innerHTML = "<b>Örnek</b>"
+
+    listOl.appendChild(listLi);
+
+    paragraf.remove();
+
+  </script>
+
+  <!--Örnek-4-->
+  <label>Tweet</label><br />
+  <textarea id="tweet" onkeyup="Say()" placeholder="metin girin"></textarea>
+  <div id="karakter"></div>
+
+  <script>
+    function Say() {
+      var metin = document.getElementById("tweet");
+      var harfSayisi = metin.value.length;
+      document.getElementById("karakter").innerHTML = harfSayisi + " karakter girildi.";
+
+      if (harfSayisi > 10) {
+        metin.style.color = "red";
+      }
+      if (harfSayisi >= 20) {
+        metin.disabled = true;
+      }
+    }
+  </script>
+
+</body>
+
+</html>

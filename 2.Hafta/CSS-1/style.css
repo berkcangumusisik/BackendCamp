@@ -1,0 +1,25 @@
+body{
+  background-image: url("https://picsum.photos/id/445/1600/1000");
+  background-repeat: no-repeat;
+  /*background-attachment:scroll;*/
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+h3{
+  color:darkmagenta;
+}
+
+h4{
+  color:aqua;
+}
+
+#paragraf1{
+  text-align: center;
+}
+
+.paragraf2{
+  text-align: center;
+  color:blueviolet;
+  font-size: 20px;
+}
