@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Hazırlama Aracı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>CV Hazırlama Aracı</h1>
+  </header>
+  <div class="container">
+    <div class="column" id="textInputs">
+      <h2>Metin İçerikleri</h2>
+      <div class="input-group">
+        <h3>İsim Kutusu</h3>
+        <input type="text" id="name" placeholder="Ad Soyad">
+        <input type="text" id="title" placeholder="Ünvan">
+      </div>
+      <div class="input-group">
+        <h3>İletişim Bilgileri</h3>
+        <input type="tel" id="phone" placeholder="Telefon">
+        <input type="email" id="email" placeholder="Mail">
+        <input type="text" id="web" placeholder="Web">
+        <textarea id="address" placeholder="Adres"></textarea>
+      </div>
+      <div class="input-group">
+        <h3>Eğitim Bilgileri</h3>
+        <textarea id="educationDescription" placeholder="Açıklama"></textarea>
+        <label>Okul Sayısı: <select id="educationCount" onchange="updateEducationFields()">
+            <option value="1">1 Okul</option>
+            <option value="2">2 Okul</option>
+            <option value="3">3 Okul</option>
+          </select></label>
+        <div id="educationFields"></div>
+      </div>
+      <div class="input-group">
+        <h3>Yetenekler</h3>
+        <label>Yetenek Sayısı: <select id="skillCount" onchange="updateSkillFields()">
+            <option value="1">1 Yetenek</option>
+            <option value="2">2 Yetenek</option>
+            <option value="3">3 Yetenek</option>
+          </select></label>
+        <div id="skillFields"></div>
+      </div>
+      <div class="input-group">
+        <h3>Hakkımda</h3>
+        <textarea id="about" placeholder="Açıklama"></textarea>
+      </div>
+      <div class="input-group">
+        <h3>İş Deneyimi</h3>
+        <textarea id="experience" placeholder="Açıklama"></textarea>
+      </div>
+    </div>
+    <div class="column" id="styleInputs">
+      <h2>Görünüş</h2>
+      <div class="input-group">
+        <h3>Renkler</h3>
+        <label>Arkaplan Rengi: <input type="color" id="bgColor" value="#ffffff"></label>
+        <label>Sol Kolon Rengi: <input type="color" id="leftColor" value="#ff0000"></label>
+        <label>İsim Kutusu Rengi: <input type="color" id="nameBoxColor" value="#333333"></label>
+        <label>İsim Kutusu Yazı Rengi: <input type="color" id="nameBoxTextColor" value="#ffffff"></label>
+      </div>
+      <div class="input-group">
+        <h3>Yazı Tipi</h3>
+        <select id="fontFamily">
+          <option value="Arial">Arial</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Times New Roman">Times New Roman</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <h3>Fotoğraf</h3>
+        <select id="photoShape">
+          <option value="circle">Yuvarlak</option>
+          <option value="square">Kare</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <h3>Başlık Altı Çizgileri</h3>
+        <input type="color" id="underlineColor" value="#000000">
+        <select id="underlineStyle">
+          <option value="solid">Düz</option>
+          <option value="dashed">Çizgili</option>
+          <option value="dotted">Noktalı</option>
+        </select>
+      </div>
+    </div>
+    <div class="column" id="cvPreview">
+      <div id="cv">
+        <div id="nameBox">
+          <div id="photoContainer"></div>
+          <h1 id="cvName">AD SOYAD</h1>
+          <p id="cvTitle">UNVAN</p>
+        </div>
+        <div id="cvContent">
+          <div id="leftColumn">
+            <h2>İLETİŞİM</h2>
+            <p id="cvContact"></p>
+            <h2>EĞİTİM</h2>
+            <p id="cvEducation"></p>
+            <h2>YETENEKLER</h2>
+            <p id="cvSkills"></p>
+          </div>
+          <div id="rightColumn">
+            <h2>HAKKIMDA</h2>
+            <p id="cvAbout"></p>
+            <h2>İŞ DENEYİMİ</h2>
+            <p id="cvExperience"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
