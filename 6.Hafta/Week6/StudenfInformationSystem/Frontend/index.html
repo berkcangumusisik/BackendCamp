@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Öğrenci Bilgi Sistemi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    input,
+    button {
+      margin: 5px 0;
+      padding: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Öğrenci Bilgi Sistemi</h1>
+
+  <h2>Öğrenci Ekle/Güncelle</h2>
+  <form id="studentForm">
+    <input type="number" id="studentId" placeholder="ID" required>
+    <input type="text" id="firstName" placeholder="Ad" required>
+    <input type="text" id="lastName" placeholder="Soyad" required>
+    <input type="text" id="studentNumber" placeholder="Öğrenci Numarası" required>
+    <input type="number" id="grade" placeholder="Sınıf" required>
+    <button type="submit">Kaydet</button>
+  </form>
+
+  <h2>Öğrenci Listesi</h2>
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Öğrenci Numarası</th>
+        <th>Sınıf</th>
+        <th>İşlemler</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

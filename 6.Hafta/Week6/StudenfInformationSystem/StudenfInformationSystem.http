@@ -1,0 +1,6 @@
+@StudenfInformationSystem_HostAddress = http://localhost:5189
+
+GET {{StudenfInformationSystem_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
